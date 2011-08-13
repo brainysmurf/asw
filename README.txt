@@ -18,12 +18,7 @@ Installation
 ------------
 
 AppleScriptWrapper is packaged using the standard Python Distribution Utilities 
-(a.k.a. Distutils). To install appscript, cd to the appscript-1.0.0 
-directory and run:
-
-  python setup.py install
-
-or:
+(a.k.a. Distutils). To install appscript, cd to the asw directory and run:
 
   python3 setup.py install
 
