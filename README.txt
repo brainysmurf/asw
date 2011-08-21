@@ -22,7 +22,6 @@ AppleScriptWrapper is packaged using the standard Python Distribution Utilities
 
   python3 setup.py install
 
-
 Setuptools/Distribute (available from <http://cheeseshop.python.org/pypi>) 
 will be used if installed, otherwise setup.py will revert to Distutils.
 
