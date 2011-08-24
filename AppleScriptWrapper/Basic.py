@@ -92,7 +92,7 @@ class App_Dictionary_Only(object):
         """
         Old version
         """
-        verbose = False
+        verbose = True
         if name == "default_target":
             if not self._rerouted_target:
                 return self._default_target()

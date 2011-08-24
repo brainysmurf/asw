@@ -82,7 +82,7 @@ class Klass(AppleScriptWrapper):
         Translates that basic export command to a more pythonic version
         """
         data = self.application.export()
-        return [d.split('\t') for d in data.split('\n') if d]
+        return [d.split('\t') for d in data.split('\n') if any(d)]
 
     def export_for_moodle(self):
         """
@@ -91,7 +91,7 @@ class Klass(AppleScriptWrapper):
         glossary = Glossary("Testing", "Intro")
         data = self.export()
         for item in data:
-            glossary.add_entry(item[0], item[1], "", "", item[2], item[0], item[0])
+            glossary.add_entry(item[0], item[1] if len(item) >= 1 else "", "", "", item[2] if len(item) >=2 else "", item[0], item[0])
         return glossary.result()
 
     def saved(self):
